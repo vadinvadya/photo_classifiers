@@ -18,7 +18,7 @@ transform = transforms.Compose([
 # Загрузка модели
 @st.cache_resource
 def load_model():
-    model = torch.load("/home/gladiator3000/Project/11/models/animal_new_model.pt", map_location=torch.device("cpu"), weights_only=False)
+    model = torch.load("models/animal_new_model.pt", map_location=torch.device("cpu"), weights_only=False)
     model.eval()
     return model
 
