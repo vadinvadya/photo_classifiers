@@ -59,15 +59,6 @@ if uploaded_file:
     st.write(f" **Предсказанный класс:** {label}")
     st.caption(f"⏱ Время инференса: {elapsed:.3f} сек")
 
-if uploaded_file:
-    image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Загруженное изображение", use_container_width=True)
-
-    st.subheader("Результат")
-    label, elapsed = predict(image)
-    st.write(f" **Предсказанный класс:** {label}")
-    st.caption(f"⏱ Время инференса: {elapsed:.3f} сек")
-
 sentiment_mapping = ["one", "two", "three", "four", "five"]
 selected = st.feedback("stars")
 if selected is not None:
